@@ -31,6 +31,14 @@ url: "https://balsertechnologies.com" # the base hostname & protocol for your si
 twitter_username: jekyllrb
 github_username:  jekyll
 
+locale: "es-ES"
+
+analytics:
+  google:
+
+collections:
+  portfolio:
+
 # Build settings
 # theme: minima
 plugins:

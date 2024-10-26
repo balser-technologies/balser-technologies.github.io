@@ -1,7 +1,11 @@
+# Site settings
 title: Balser Technologies
-description: Cloud consultancy specializing in DevOps, Quality, and Security Engineering services
-baseurl: ""
-url: "https://balser-technologies.com"
+email: info@balsertechnologies.com
+description: >-
+  Balser Technologies: Your partner in DevOps, Quality, and Security Engineering. 
+  We optimize your cloud solutions for peak performance and ironclad security.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://www.balsertechnologies.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
@@ -14,4 +18,28 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Sass settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Include custom CSS
+include:
+  - assets
+
+# Collections
+collections:
+  services:
+    output: true
+
+# Default layout
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

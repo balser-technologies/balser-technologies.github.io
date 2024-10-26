@@ -1,0 +1,61 @@
+---
+layout: default
+title: Services
+---
+
+<section class="w-full py-12 md:py-24 lg:py-32 bg-blue-50">
+    <div class="container px-4 md:px-6">
+        <div class="flex flex-col items-center space-y-4 text-center">
+            <div class="space-y-2">
+                <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                    Our Services
+                </h1>
+                <p class="mx-auto max-w-[700px] text-gray-600 md:text-xl">
+                    Comprehensive cloud consultancy services to optimize your infrastructure, enhance quality, and fortify security.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="w-full py-12 md:py-24 lg:py-32">
+    <div class="container px-4 md:px-6">
+        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            {% for service in site.data.services %}
+            <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+                <div class="flex flex-col space-y-1.5 p-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-10 w-10 text-blue-600 mb-2">
+                        <path d="{{ service.icon }}"></path>
+                    </svg>
+                    <h3 class="text-2xl font-semibold leading-none tracking-tight">{{ service.title }}</h3>
+                    <p class="text-sm text-muted-foreground">{{ service.description }}</p>
+                </div>
+                <div class="p-6 pt-0">
+                    <ul class="list-disc list-inside space-y-2 text-gray-600">
+                        {% for feature in service.features %}
+                        <li>{{ feature }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="w-full py-12 md:py-24 lg:py-32 bg-gray-100">
+    <div class="container px-4 md:px-6">
+        <div class="flex flex-col items-center space-y-4 text-center">
+            <div  class="space-y-2">
+                <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Ready to Get Started?</h2>
+                <p class="mx-auto max-w-[600px] text-gray-600 md:text-xl">
+                    Let us help you optimize your cloud infrastructure, improve quality, and enhance security.
+                </p>
+            </div>
+            <div class="space-x-4">
+                <a href="{{ site.baseurl }}/#contact" class="inline-flex items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-blue-700">Contact Us</a>
+                <a href="{{ site.baseurl }}/#about" class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>

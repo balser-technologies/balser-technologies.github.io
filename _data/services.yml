@@ -1,0 +1,59 @@
+- title: DevOps Engineering
+  icon: "M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"
+  description: Streamline your development and operations
+  features:
+    - Continuous Integration/Continuous Deployment (CI/CD)
+    - Infrastructure as Code (IaC)
+    - Containerization and Orchestration
+    - Cloud Migration and Optimization
+    - Monitoring and Logging Solutions
+
+- title: Quality Engineering
+  icon: "M22 11.08V12a10 10 0 1 1-5.93-9.14"
+  description: Ensure top-notch quality in your software
+  features:
+    - Automated Testing Strategies
+    - Performance Testing and Optimization
+    - User Experience (UX) Testing
+    - Test Environment Management
+    - Continuous Quality Monitoring
+
+- title: Security Engineering
+  icon: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+  description: Protect your digital assets
+  features:
+    - Threat Modeling and Risk Assessment
+    - Security Architecture Design
+    - Penetration Testing and Vulnerability Management
+    - Compliance and Regulatory Support
+    - Incident Response Planning
+
+- title: Cloud Infrastructure Management
+  icon: "M20 16.2A4.5 4.5 0 0 0 17.5 8h-1.8A7 7 0 1 0 4 14.9"
+  description: Optimize your cloud resources
+  features:
+    - Multi-cloud Strategy Development
+    - Cloud Cost Optimization
+    - Scalability and High Availability Design
+    - Disaster Recovery Planning
+    - Cloud Security Best Practices
+
+- title: Version Control and Collaboration
+  icon: "M15 3v4a1 1 0 0 0 1 1h4"
+  description: Enhance team productivity
+  features:
+    - Git Workflow Optimization
+    - Code Review Processes
+    - Branching and Merging Strategies
+    - Collaborative Development Practices
+    - Version Control System Administration
+
+- title: Performance Optimization
+  icon: "M22 12h-4l-3 9L9 3l-3 9H2"
+  description: Maximize your application's efficiency
+  features:
+    - Application Performance Monitoring
+    - Database Optimization
+    - Caching Strategies
+    - Load Balancing and Scaling
+    - Front-end Performance Tuning

@@ -16,7 +16,7 @@ const legalLinks = [
 ];
 
 const Footer = () => (
-  <footer className="bg-charcoal text-off-white">
+  <footer className="bg-brand-blue text-off-white">
     <div className="container mx-auto px-4 py-12 md:py-16">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
         <div className="space-y-4">
@@ -32,7 +32,7 @@ const Footer = () => (
           <ul className="space-y-3">
             {allServices.map((s) => (
               <li key={s.slug}>
-                <a href={serviceHref(s.slug)} className="text-sm text-off-white/70 hover:text-cyan-bright transition-colors">
+                <a href={serviceHref(s.slug)} className="text-sm text-off-white/70 hover:text-brand-orange transition-colors">
                   {s.title}
                 </a>
               </li>
@@ -45,7 +45,7 @@ const Footer = () => (
           <ul className="space-y-3">
             {companyLinks.map((link) => (
               <li key={link.label}>
-                <a href={link.href} className="text-sm text-off-white/70 hover:text-cyan-bright transition-colors">
+                <a href={link.href} className="text-sm text-off-white/70 hover:text-brand-orange transition-colors">
                   {link.label}
                 </a>
               </li>
@@ -57,13 +57,13 @@ const Footer = () => (
           <h2 className="font-bold text-lg mb-4">Contacto</h2>
           <div className="space-y-4">
             <div className="flex items-start gap-3">
-              <Mail className="h-5 w-5 text-cyan-bright mt-0.5 flex-shrink-0" />
-              <a href={`mailto:${company.email}`} className="text-sm text-off-white/70 hover:text-cyan-bright transition-colors break-all">
+              <Mail className="h-5 w-5 text-brand-orange mt-0.5 flex-shrink-0" />
+              <a href={`mailto:${company.email}`} className="text-sm text-off-white/70 hover:text-brand-orange transition-colors break-all">
                 {company.email}
               </a>
             </div>
             <div className="flex items-start gap-3">
-              <MapPin className="h-5 w-5 text-cyan-bright mt-0.5 flex-shrink-0" />
+              <MapPin className="h-5 w-5 text-brand-orange mt-0.5 flex-shrink-0" />
               <p className="text-sm text-off-white/70">{company.city}</p>
             </div>
             <Button
@@ -88,7 +88,7 @@ const Footer = () => (
           <ul className="flex flex-wrap justify-center gap-4 md:gap-6">
             {legalLinks.map((link) => (
               <li key={link.label}>
-                <a href={link.href} className="hover:text-cyan-bright transition-colors">
+                <a href={link.href} className="hover:text-brand-orange transition-colors">
                   {link.label}
                 </a>
               </li>

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import heroImage from "@/assets/hero-cloud-architecture.jpg";
 import { useEffect, useRef, useState } from "react";
+import BrandDash from "./BrandDash";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -79,10 +80,12 @@ const Hero = () => {
             </span>
           </div>
 
+          <BrandDash />
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
             Moderniza, escala y asegura tu{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-hero">
+            {/* Same gradient effect as before, warming from a lighter brand blue into the accent */}
+            <span className="text-transparent bg-clip-text bg-[linear-gradient(90deg,hsl(var(--brand-blue-mid))_0%,hsl(var(--brand-blue-mid))_45%,#E05000_100%)]">
               infraestructura cloud
             </span>{" "}
             con confianza

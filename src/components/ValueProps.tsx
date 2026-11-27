@@ -29,7 +29,7 @@ const ValueProps = () => (
         {cards.map(({ icon: Icon, heading, text }) => (
           <div
             key={heading}
-            className="group bg-card rounded-2xl p-8 shadow-soft hover:shadow-[0_10px_40px_-10px_hsl(var(--cyan-bright)/0.4)] hover:-translate-y-2 transition-all duration-300 border border-border"
+            className="group bg-card rounded-2xl p-8 shadow-soft hover:shadow-[0_10px_40px_-10px_hsl(var(--brand-orange)/0.4)] hover:-translate-y-2 transition-all duration-300 border border-border"
           >
             <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
               <Icon className="w-7 h-7 text-secondary" />

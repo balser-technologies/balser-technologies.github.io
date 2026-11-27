@@ -28,6 +28,11 @@ function head(route, canonicalPath) {
     `<meta property="og:title" content="${esc(route.title)}" />`,
     `<meta property="og:description" content="${esc(route.description)}" />`,
     canonicalPath ? `<meta property="og:url" content="${url}" />` : "",
+    `<meta property="og:image" content="${site.url}/og-image.jpg" />`,
+    `<meta property="og:image:width" content="1200" />`,
+    `<meta property="og:image:height" content="630" />`,
+    `<meta property="og:image:alt" content="${esc(site.brand)}" />`,
+    `<meta name="twitter:card" content="summary_large_image" />`,
   ]
     .filter(Boolean)
     .join("\n    ");

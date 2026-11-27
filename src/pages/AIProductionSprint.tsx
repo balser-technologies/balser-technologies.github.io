@@ -162,7 +162,7 @@ const AIProductionSprint = () => (
                   <li key={it}>· {it}</li>
                 ))}
               </ul>
-              <p className="text-sm font-semibold text-secondary">Resultado: {p.deliverable}</p>
+              <p className="text-sm font-semibold text-brand-orange-text">Resultado: {p.deliverable}</p>
             </li>
           ))}
         </ol>

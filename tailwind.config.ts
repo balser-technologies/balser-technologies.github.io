@@ -15,7 +15,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['"Noto Sans"', 'system-ui', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
@@ -25,12 +25,12 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         
-        'ocean-blue': "hsl(var(--ocean-blue))",
-        'terracotta': "hsl(var(--terracotta))",
-        'cyan-bright': "hsl(var(--cyan-bright))",
+        'brand-blue': "hsl(var(--brand-blue))",
+        'brand-blue-mid': "hsl(var(--brand-blue-mid))",
+        'brand-orange': "hsl(var(--brand-orange))",
+        'brand-orange-text': "hsl(var(--brand-orange-text))",
+        'graphite': "hsl(var(--graphite))",
         'off-white': "hsl(var(--off-white))",
-        'slate': "hsl(var(--slate))",
-        'charcoal': "hsl(var(--charcoal))",
         
         primary: {
           DEFAULT: "hsl(var(--primary))",

@@ -34,15 +34,15 @@ const Navigation = () => {
 
   const desktopLink = (active: boolean) =>
     `font-medium transition-all duration-200 py-1 ${
-      active ? "text-primary border-b-2 border-primary" : "text-muted-foreground hover:text-foreground"
+      active ? "text-primary border-b-2 border-brand-orange" : "text-muted-foreground hover:text-foreground"
     }`;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border" aria-label="Principal">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <a href="/" aria-label="BALSER Technologies, inicio">
-            <Logo compact />
+            <Logo />
           </a>
 
           {/* Desktop menu */}
@@ -79,7 +79,7 @@ const Navigation = () => {
                       key={service.slug}
                       href={serviceHref(service.slug)}
                       className={`block px-4 py-2.5 text-sm transition-colors hover:bg-muted ${
-                        service.highlight ? "text-secondary font-semibold" : "text-popover-foreground"
+                        service.highlight ? "text-brand-orange-text font-semibold" : "text-popover-foreground"
                       }`}
                     >
                       {service.title}
@@ -117,7 +117,7 @@ const Navigation = () => {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden fixed inset-0 top-16 z-40 transition-all duration-300 ${
+        className={`md:hidden fixed inset-0 top-20 z-40 transition-all duration-300 ${
           mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -147,7 +147,7 @@ const Navigation = () => {
                       key={service.slug}
                       href={serviceHref(service.slug)}
                       className={`block py-2.5 px-4 rounded-lg hover:bg-muted ${
-                        service.highlight ? "text-secondary font-semibold" : "text-muted-foreground"
+                        service.highlight ? "text-brand-orange-text font-semibold" : "text-muted-foreground"
                       }`}
                     >
                       {service.title}

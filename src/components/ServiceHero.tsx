@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
+import BrandDash from "./BrandDash";
 import heroFallback from "@/assets/hero-cloud-architecture.jpg";
 
 interface ServiceHeroProps {
@@ -110,6 +111,7 @@ const ServiceHero = ({
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-6 animate-in fade-in slide-in-from-left duration-700">
+            <BrandDash />
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-foreground">
               {headline}
             </h1>

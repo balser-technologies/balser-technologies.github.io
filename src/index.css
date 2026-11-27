@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* BALSER Technologies Design System - Mediterranean Professional */
+    
+    /* Brand Colors */
+    --ocean-blue: 207 87% 29%;        /* Deep ocean blue - trust, technology */
+    --terracotta: 13 67% 63%;         /* Warm terracotta - Malaga warmth */
+    --cyan-bright: 186 82% 58%;       /* Bright cyan - innovation, cloud */
+    
+    /* Neutrals */
+    --off-white: 210 17% 98%;         /* Off-white background */
+    --slate: 210 29% 24%;             /* Slate gray */
+    --charcoal: 0 0% 10%;             /* Charcoal text */
+    
+    /* Semantic Tokens */
+    --background: var(--off-white);
+    --foreground: var(--charcoal);
+
+    --card: 0 0% 100%;
+    --card-foreground: var(--charcoal);
+
+    --popover: 0 0% 100%;
+    --popover-foreground: var(--charcoal);
+
+    --primary: var(--ocean-blue);
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: var(--terracotta);
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: var(--slate);
+
+    --accent: var(--ocean-blue);
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: var(--ocean-blue);
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--ocean-blue)) 0%, hsl(var(--cyan-bright)) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(var(--terracotta)) 0%, hsl(13 67% 55%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -2px hsl(var(--ocean-blue) / 0.1);
+    --shadow-elevated: 0 10px 40px -10px hsl(var(--ocean-blue) / 0.15);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: var(--charcoal);
+    --foreground: var(--off-white);
+
+    --card: 210 20% 15%;
+    --card-foreground: var(--off-white);
+
+    --popover: 210 20% 15%;
+    --popover-foreground: var(--off-white);
+
+    --primary: var(--cyan-bright);
+    --primary-foreground: var(--charcoal);
+
+    --secondary: var(--terracotta);
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 20% 20%;
+    --muted-foreground: 210 20% 70%;
+
+    --accent: var(--ocean-blue);
+    --accent-foreground: 0 0% 100%;
+
+    --border: 210 20% 25%;
+    --input: 210 20% 25%;
+    --ring: var(--cyan-bright);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight;
+  }
+}

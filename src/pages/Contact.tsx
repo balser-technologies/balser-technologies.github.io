@@ -93,6 +93,13 @@ const Contact = () => {
                   ? `Se ha abierto tu programa de correo con el mensaje preparado. Si no se abre, escríbenos a ${company.email}.`
                   : "Al pulsar se abrirá tu programa de correo con el mensaje listo para enviar. No guardamos nada en esta web."}
               </p>
+              <p className="text-xs text-muted-foreground leading-relaxed border-t border-border pt-4">
+                <strong>Protección de datos.</strong> Responsable: {company.legalName}. Finalidad: responder a tu consulta y, si lo pides, preparar una propuesta. Base jurídica: medidas precontractuales a tu petición e interés legítimo. Destinatarios: no se ceden datos a terceros salvo obligación legal. Derechos: acceso, rectificación, supresión y otros, escribiendo a {company.privacyEmail}. Más información en la{" "}
+                <a href="/privacidad" className="text-primary hover:underline">
+                  política de privacidad
+                </a>
+                .
+              </p>
             </form>
           </div>
 
@@ -107,7 +114,7 @@ const Contact = () => {
               </div>
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                <p className="text-muted-foreground">{company.city}</p>
+                <p className="text-muted-foreground">{company.registeredAddress}</p>
               </div>
             </div>
             <div className="bg-card rounded-2xl border border-border p-8">

@@ -81,9 +81,9 @@ const Footer = () => (
 
     <div className="border-t border-off-white/10">
       <div className="container mx-auto px-4 py-6">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-off-white/60">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-4 text-sm text-center lg:text-left text-off-white/60">
           <p>
-            © {new Date().getFullYear()} {company.legalName}
+            © {new Date().getFullYear()} {company.legalName} · NIF {company.taxId} · {company.registeredAddress}
           </p>
           <ul className="flex flex-wrap justify-center gap-4 md:gap-6">
             {legalLinks.map((link) => (

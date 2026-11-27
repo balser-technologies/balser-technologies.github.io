@@ -16,6 +16,9 @@ const esc = (s) => s.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g
 function head(route, canonicalPath) {
   const url = site.url + (canonicalPath === "/" ? "/" : canonicalPath);
   return [
+    // GitHub Pages cannot set response headers, so the policy goes in a meta tag.
+    `<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; media-src 'self'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />`,
+    `<meta name="referrer" content="strict-origin-when-cross-origin" />`,
     `<title>${esc(route.title)}</title>`,
     `<meta name="description" content="${esc(route.description)}" />`,
     canonicalPath ? `<link rel="canonical" href="${url}" />` : `<meta name="robots" content="noindex" />`,

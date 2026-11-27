@@ -15,7 +15,7 @@ const ContactCTA = ({
   <section className="relative py-24 px-6">
     <div className="absolute inset-0 z-0">
       <img src={ctaBackground} alt="" loading="lazy" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-foreground/80" />
+      <div className="absolute inset-0 bg-brand-blue/85" />
     </div>
     <div className="relative z-10 max-w-3xl mx-auto text-center">
       <div className="bg-card rounded-2xl shadow-elevated p-8 md:p-12">

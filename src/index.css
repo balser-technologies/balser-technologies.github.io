@@ -8,86 +8,54 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* BALSER Technologies Design System - Mediterranean Professional */
-    
-    /* Brand Colors */
-    --ocean-blue: 207 87% 29%;        /* Deep ocean blue - trust, technology */
-    --terracotta: 13 67% 63%;         /* Warm terracotta - Malaga warmth */
-    --cyan-bright: 186 82% 58%;       /* Bright cyan - innovation, cloud */
-    
-    /* Neutrals */
-    --off-white: 210 17% 98%;         /* Off-white background */
-    --slate: 210 29% 24%;             /* Slate gray */
-    --charcoal: 0 0% 10%;             /* Charcoal text */
-    
-    /* Semantic Tokens */
-    --background: var(--off-white);
-    --foreground: var(--charcoal);
+    /* BALSER Technologies brand (Guía de marca, 2026-11) */
+    --brand-blue: 207 91% 13%;        /* Azul profundo #03233D */
+    --brand-blue-mid: 207 85% 28%;    /* Tint of azul profundo for gradients and links */
+    --brand-orange: 23 100% 50%;      /* Naranja #FF6300: accents, CTA backgrounds, never small text on white */
+    --brand-orange-text: 23 100% 36%; /* #B84600: orange for small text on light backgrounds (AA) */
+    --graphite: 0 0% 24%;             /* Gris grafito #3C3C3C */
+    --off-white: 216 33% 97%;         /* Light background */
+
+    --background: 0 0% 100%;
+    --foreground: var(--brand-blue);
 
     --card: 0 0% 100%;
-    --card-foreground: var(--charcoal);
+    --card-foreground: var(--brand-blue);
 
     --popover: 0 0% 100%;
-    --popover-foreground: var(--charcoal);
+    --popover-foreground: var(--brand-blue);
 
-    --primary: var(--ocean-blue);
+    --primary: var(--brand-blue);
     --primary-foreground: 0 0% 100%;
 
-    --secondary: var(--terracotta);
-    --secondary-foreground: 0 0% 100%;
+    --secondary: var(--brand-orange);
+    --secondary-foreground: var(--brand-blue);
 
-    --muted: 210 20% 96%;
-    --muted-foreground: var(--slate);
+    --muted: var(--off-white);
+    --muted-foreground: 209 15% 36%;
 
-    --accent: var(--ocean-blue);
-    --accent-foreground: 0 0% 100%;
+    --accent: var(--brand-orange);
+    --accent-foreground: var(--brand-blue);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: var(--ocean-blue);
+    --border: 213 24% 90%;
+    --input: 213 24% 85%;
+    --ring: var(--brand-orange);
 
     --radius: 0.75rem;
 
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--ocean-blue)) 0%, hsl(var(--cyan-bright)) 100%);
-    --gradient-cta: linear-gradient(135deg, hsl(var(--terracotta)) 0%, hsl(13 67% 55%) 100%);
-    
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-blue)) 0%, hsl(var(--brand-blue-mid)) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(var(--brand-orange)) 0%, hsl(18 100% 47%) 100%);
+
     /* Shadows */
-    --shadow-soft: 0 4px 20px -2px hsl(var(--ocean-blue) / 0.1);
-    --shadow-elevated: 0 10px 40px -10px hsl(var(--ocean-blue) / 0.15);
-    
+    --shadow-soft: 0 4px 20px -2px hsl(var(--brand-blue) / 0.08);
+    --shadow-elevated: 0 10px 40px -10px hsl(var(--brand-blue) / 0.18);
+
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .dark {
-    --background: var(--charcoal);
-    --foreground: var(--off-white);
-
-    --card: 210 20% 15%;
-    --card-foreground: var(--off-white);
-
-    --popover: 210 20% 15%;
-    --popover-foreground: var(--off-white);
-
-    --primary: var(--cyan-bright);
-    --primary-foreground: var(--charcoal);
-
-    --secondary: var(--terracotta);
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 210 20% 20%;
-    --muted-foreground: 210 20% 70%;
-
-    --accent: var(--ocean-blue);
-    --accent-foreground: 0 0% 100%;
-
-    --border: 210 20% 25%;
-    --input: 210 20% 25%;
-    --ring: var(--cyan-bright);
   }
 }
 

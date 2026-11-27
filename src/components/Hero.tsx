@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import heroImage from "@/assets/hero-cloud-architecture.jpg";
 import { useEffect, useRef, useState } from "react";
+import BrandDash from "./BrandDash";
 
 const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -79,6 +80,7 @@ const Hero = () => {
             </span>
           </div>
 
+          <BrandDash />
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
             Moderniza, escala y asegura tu{" "}

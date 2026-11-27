@@ -18,7 +18,7 @@ const ServiceCard = ({ icon: Icon, title, brief, href, highlight }: ServiceCardP
     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5 group-hover:bg-primary/15 transition-colors">
       <Icon className="w-6 h-6 text-primary" />
     </div>
-    {highlight && <span className="text-xs font-semibold uppercase tracking-wider text-secondary mb-2">Oferta destacada</span>}
+    {highlight && <span className="text-xs font-semibold uppercase tracking-wider text-brand-orange-text mb-2">Oferta destacada</span>}
     <h3 className="text-xl font-bold text-foreground mb-3">{title}</h3>
     <p className="text-muted-foreground leading-relaxed mb-6 flex-1">{brief}</p>
     <span className="inline-flex items-center font-semibold text-primary group-hover:text-secondary transition-colors">

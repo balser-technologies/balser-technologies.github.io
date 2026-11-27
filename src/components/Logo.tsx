@@ -1,17 +1,16 @@
-interface LogoProps {
-  inverted?: boolean;
-  compact?: boolean;
-}
+import logoPrincipal from "@/assets/brand/balser-horizontal-principal.svg";
+import logoInvertido from "@/assets/brand/balser-horizontal-invertido.svg";
 
-const Logo = ({ inverted = false, compact = false }: LogoProps) => (
-  <span className="flex items-center gap-2">
-    <span className="w-10 h-10 bg-gradient-hero rounded-lg flex items-center justify-center" aria-hidden="true">
-      <span className="text-white font-bold text-xl">B</span>
-    </span>
-    <span className={`font-bold text-xl ${inverted ? "text-off-white" : "text-foreground"}`}>
-      BALSER{!compact && <span className="font-medium"> Technologies</span>}
-    </span>
-  </span>
+// Approved artwork from the brand kit. The guide sets a 200 px minimum width
+// for the horizontal logo; use the inverted version on azul profundo.
+const Logo = ({ inverted = false, className = "w-[200px]" }: { inverted?: boolean; className?: string }) => (
+  <img
+    src={inverted ? logoInvertido : logoPrincipal}
+    alt="BALSER Technologies"
+    width={880}
+    height={196}
+    className={`h-auto ${className}`}
+  />
 );
 
 export default Logo;

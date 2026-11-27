@@ -1,5 +1,5 @@
 import { createRoot, hydrateRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router";
 import App from "./App";
 import "@fontsource/noto-sans/400.css";
 import "@fontsource/noto-sans/500.css";

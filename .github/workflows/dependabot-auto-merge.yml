@@ -1,0 +1,57 @@
+# Merges Dependabot minor and patch updates once the "Deploy site" build has
+# passed on the PR. main has no branch protection, so GitHub's own auto-merge
+# cannot wait for checks; this workflow does the waiting instead, in two steps:
+#   1. on the PR: label minor/patch updates "automerge"
+#   2. when "Deploy site" finishes green on a Dependabot branch: merge if labelled
+# Major updates are never labelled and always need a human.
+name: Dependabot auto-merge
+
+on:
+  pull_request:
+  workflow_run:
+    workflows: [Deploy site]
+    types: [completed]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  label:
+    if: github.event_name == 'pull_request' && github.event.pull_request.user.login == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - id: meta
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Label minor and patch updates
+        if: steps.meta.outputs.update-type != 'version-update:semver-major'
+        run: gh pr edit "$PR_URL" --add-label automerge
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  merge:
+    if: >-
+      github.event_name == 'workflow_run' &&
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'pull_request' &&
+      startsWith(github.event.workflow_run.head_branch, 'dependabot/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge if labelled and the build ran on the PR's current head
+        run: |
+          pr=$(gh pr list --repo "$REPO" --head "$BRANCH" --state open --json number,headRefOid,labels,author \
+            --jq ".[] | select(.author.login == \"app/dependabot\") | select(.headRefOid == \"$SHA\") | select(any(.labels[]; .name == \"automerge\")) | .number")
+          if [ -z "$pr" ]; then
+            echo "Nothing to merge for $BRANCH at $SHA"
+            exit 0
+          fi
+          gh pr merge "$pr" --repo "$REPO" --squash --delete-branch
+        env:
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.event.workflow_run.head_branch }}
+          SHA: ${{ github.event.workflow_run.head_sha }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

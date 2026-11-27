@@ -84,7 +84,8 @@ const Hero = () => {
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
             Moderniza, escala y asegura tu{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-hero">
+            {/* Brand orange, deepened slightly so the large text keeps at least 3:1 on the light overlay */}
+            <span className="text-transparent bg-clip-text bg-[linear-gradient(135deg,#F55A00_0%,#E05000_100%)]">
               infraestructura cloud
             </span>{" "}
             con confianza
